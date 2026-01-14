@@ -1,16 +1,15 @@
-import whisper
 import os
+import whisper
 
-# Explicitly tell Whisper where ffmpeg is
-os.environ["PATH"] += os.pathsep + r"C:\ffmpeg\bin"
+# Explicitly set ffmpeg path for Streamlit Cloud
+os.environ["PATH"] += os.pathsep + "/usr/bin"
 
 # Load Whisper model once
 model = whisper.load_model("base")
 
 def transcribe_audio(audio_path):
     """
-    Takes an audio file path
-    Returns transcribed text
+    Takes an audio file path and returns transcribed text
     """
     result = model.transcribe(audio_path)
     return result["text"]
