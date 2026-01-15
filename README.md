@@ -1,68 +1,117 @@
-# AI Lecture Summarizer 🎓
+🎓 AI Lecture Summarizer
 
-An AI-powered web application that converts lecture audio into clear, structured text summaries.
+An audio-based AI application that converts lecture recordings into concise, structured summaries using speech recognition and transformer-based NLP.
 
----
+This project demonstrates an end-to-end AI pipeline:
+Audio → Speech-to-Text → NLP Summarization → Readable Notes
 
-## 🚀 Features
-- Upload lecture audio files (MP3 / WAV)
-- Convert speech to text using Whisper
-- Generate concise summaries using Transformer-based NLP
-- Simple and interactive Streamlit web interface
+✨ Key Highlights
 
----
+🎧 Accepts lecture audio files (MP3 / WAV)
 
-## 🛠️ Tech Stack
-- Python
-- Streamlit
-- OpenAI Whisper (Speech-to-Text)
-- Hugging Face Transformers (BART Large CNN)
+🗣️ Converts speech to text using OpenAI Whisper
 
----
+🧠 Generates summaries using Transformer NLP models (BART)
 
-## 📂 Project Structure
+🖥️ Simple and intuitive Streamlit interface
+
+🧩 Modular and clean codebase
+
+⚙️ Designed with real-world system constraints in mind
+
+🧠 System Architecture
+Lecture Audio
+      ↓
+Speech-to-Text (Whisper)
+      ↓
+Text Processing
+      ↓
+Transformer-based Summarization (BART)
+      ↓
+Concise Lecture Summary
+
+
+🛠️ Tech Stack
+
+| Category       | Technology                       |
+| -------------- | -------------------------------- |
+| Language       | Python                           |
+| UI             | Streamlit                        |
+| Speech-to-Text | OpenAI Whisper                   |
+| NLP            | Hugging Face Transformers (BART) |
+| ML Framework   | PyTorch                          |
+
+
+📂 Project Structure
 ai-lecture-summarizer/
-├── app.py
-├── transcriber.py
-├── summarizer.py
-├── requirements.txt
-├── README.md
+├── app.py              # Streamlit UI
+├── transcriber.py      # Audio → Text (Whisper)
+├── summarizer.py       # Text → Summary (BART)
+├── requirements.txt    # Dependencies
+├── README.md           # Project documentation
 └── .gitignore
 
-yaml
-Copy code
+▶️ How to Run Locally
 
----
+⚠️ This project is intended to be run locally due to audio processing dependencies.
 
-## ▶️ How to Run Locally
-
-1. Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/ai-lecture-summarizer.git
-Navigate into the project:
-
-bash
-Copy code
+1️⃣ Clone the repository
+git clone https://github.com/Snehith1302/ai-lecture-summarizer.git
 cd ai-lecture-summarizer
-Create and activate virtual environment:
 
-bash
-Copy code
+2️⃣ Create virtual environment
 python -m venv venv
 venv\Scripts\activate
-Install dependencies:
 
-bash
-Copy code
+3️⃣ Install dependencies
 pip install -r requirements.txt
-Run the application:
 
-bash
-Copy code
+4️⃣ Run the application
 streamlit run app.py
-🌐 Deployment
-This application can be deployed using Streamlit Cloud directly from the GitHub repository.
 
-🎯 Use Case
-Helps students automatically generate notes from recorded lectures, improving learning efficiency and revision.
+📸 Demo (Local Execution)
+<img width="1919" height="1005" alt="Screenshot 2026-01-14 232426" src="https://github.com/user-attachments/assets/25e10200-fb7d-4477-a3d7-18ab8ec2409b" />
+
+⚠️ Deployment Note
+
+This application is designed for local execution.
+
+Speech-to-text functionality relies on Whisper, which depends on FFmpeg and system-level audio processing.
+Due to limitations in managed cloud platforms, the full audio pipeline is not deployed online.
+
+This design decision ensures:
+
+Stability
+
+Accurate transcription
+
+Reproducibility of results
+
+🎯 Use Cases
+
+📚 Students summarizing recorded lectures
+
+📝 Automatic note generation
+
+🎧 Audio-based content analysis
+
+🧠 Learning-focused AI applications
+
+🚀 Future Enhancements
+
+Cloud-based speech-to-text APIs
+
+Speaker diarization
+
+Timestamped summaries
+
+PDF / DOC export
+
+Multi-language support
+
+👤 Author
+
+Anuka Snehith Reddy
+B.Tech – Computer Science and Engineering
+AI & ML Enthusiast
 
